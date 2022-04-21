@@ -12,8 +12,6 @@ namespace WebApp.Controllers
         private FinalProjectDBEntities db = new FinalProjectDBEntities();
         public ActionResult Index()
         {
-            db.Database.Connection.Open();
-            db.Database.Connection.Close();
             return View();
         }
 

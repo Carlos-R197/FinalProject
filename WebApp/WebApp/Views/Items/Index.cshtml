@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .scrollable {
+        height: 400px;
+        overflow-y: auto;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="~/Content/Site.css"/>
+</head>
+
+<main>
+    <section class="item-list">
+        <h2>Tus Itemes</h2>
+
+        <div id="items" class="scrollable">
+            <div class="item">
+                <div class="content">
+                    <input type="text" class="text" value="My shiny item" readonly />
+                    <label class="text" style="font-weight:100">Description</label>
+                </div>
+                <div class="actions">
+                    <button class="edit">Editar</button>
+                    <button class="delete">Borrar</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="content">
+                    <input type="text" class="text" value="My shiny item 2" readonly />
+                </div>
+                <div class="actions">
+                    <button class="edit">Editar</button>
+                    <button class="delete">Borrar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
