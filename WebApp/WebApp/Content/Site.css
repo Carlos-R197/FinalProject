@@ -38,12 +38,7 @@ header {
         margin-bottom: 1rem;
     }
 
-#new-task-form {
-    display:flex;
-}
-
 input, button {
-    appearance: none;
     border: none;
     outline: none;
     background: none;
@@ -58,6 +53,7 @@ main {
 
 .item-list {
     padding: 1rem;
+    grid-column-start: 2;
 }
 
     .item-list h2 {
@@ -120,6 +116,56 @@ main {
 .item .actions .delete {
     color: crimson;
 }
+
+#new-item-block {
+    margin:auto;
+    width: 50%; 
+    text-align:center;
+}
+
+    #new-item-block button {
+        background-color: var(--light);
+        border-radius: 5px;
+        min-width: 40%;
+        max-width: 60%;
+        height: 40px;
+        background-image: linear-gradient(to right, var(--pink), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.4s;
+    }
+
+.category-list {
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-column-start: 1;
+}
+
+    .category-list #categories {
+        background-color: var(--darkest);
+        justify-content: space-between;
+        min-height: 300px;
+        border-radius: 2rem;
+    }
+
+    .category-list #categories .category-item {
+        padding: 1rem;
+        text-align:center;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+.grid-container {
+    display: grid;
+    width: 100vh;
+    gap: 0px 20px;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+}
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
